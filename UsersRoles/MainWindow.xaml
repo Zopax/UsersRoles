@@ -1,0 +1,31 @@
+﻿<Window x:Class="UsersRoles.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UsersRoles"
+        mc:Ignorable="d"
+        Width="1280" Height="720" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="550"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DataGrid AutoGenerateColumns="False"
+                         Name="UsersDGrid"
+                         ColumnWidth="*"
+                  CanUserDeleteRows="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Логин" Binding="{Binding Login}"/>
+                <DataGridTextColumn Header="Пароль" Binding="{Binding Pasword}"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Surname}"/>
+                <DataGridTextColumn Header="Роль" Binding="{Binding IdRoleNavigation.NameRole}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Grid.Row="1" Content="Удалить пользователя" FontSize="30" Click="DeleteSelectRows_Click"/>
+        <Button Grid.Row="2" Content="Сохранить изменения" FontSize="30" Click="UpdateSelectRows_Click"/>
+    </Grid>
+</Window>

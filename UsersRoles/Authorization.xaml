@@ -1,0 +1,48 @@
+﻿<Window x:Class="UsersRoles.Authorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UsersRoles"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="450" Width="800" ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition /> 
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Авторизация"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center" FontSize="40" 
+                   FontFamily="Cambria"/>
+        <TextBox Name="AuthText" Grid.Row="2" Grid.Column="1"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Center"
+                 Width="240" Height="30"
+                 Style="{StaticResource PlaceholderTextBoxStyle}" Tag="Логин" 
+                 FontSize="20"/>
+        <PasswordBox Name="PassText" Grid.Row="3" Grid.Column="1" 
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Center"
+                 Width="240" Height="30"
+                 FontSize="20" PasswordChar="*"/>
+        <Button Name="Auth"  Grid.Column="1" Grid.Row="4" 
+                Height="30" Width="115" Content="Войти"
+                HorizontalAlignment="Right" Margin="0,0,12,0"
+                Click="Auth_Click"/>
+        <Button Name="Reg"  Grid.Column="1" Grid.Row="4" 
+                Height="30" Width="115" Content="Регистрация"
+                HorizontalAlignment="Left" Margin="13,0,0,0"
+                Click="Reg_Click"/>
+    </Grid>
+</Window>
