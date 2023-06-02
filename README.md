@@ -5,11 +5,11 @@
 3. Администратор может удалит пользователя или изменить его данные;
 4. Пользователь может просмотреть данные всех существующих пользователей (пароль скрыт);
 
-спользовал БД - PostgreSQL. 
+Использовал БД - PostgreSQL. 
 
 На основе работы с БД использовал EntityFramework scafold.
 
-подключение scafold:
+Подключение scafold:
 
 1. С помощью NuGet нужно установить следующие пакеты: Microsoft.EntityFrameworkCore.Tools Microsoft.EntityFrameworkCore.Design Microsoft.EntityFrameworkCore.SqlServer Npgsql.EntityFrameworkCore.PostgreSQL
 2. Открываем терминал и вводим команду dotnet tool install --global dotnet-ef --version 6.*
